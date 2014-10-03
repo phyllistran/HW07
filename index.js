@@ -49,14 +49,18 @@ var getAverageTime = function(person) {
 	"use strict";
     // ... return ...
     var count = 0;
+    var sum = 0;
+    // loop through person object according to finishingTimes.
     for (var time in person) {
+        // calcualte total number of laps and increase count by 1
         if (person.hasOwnProperty(time)) {
             count++;
         }
+        // calculate sum of finishingTimes.
+        sum += person[time];
     }
     // console.log(count);
-    var ans = (person.finishingTime1 + person.finishingTime2 + person.finishingTime3 + person.finishingTime4 + person.finishingTime5) / count;
-    return ans;  
+    return sum / count;  
 }
 
 console.log('Matt Avg: '+getAverageTime(matt));
