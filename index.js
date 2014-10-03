@@ -18,6 +18,8 @@ var sum = function(a, b) {
 	"use strict";
     /// return ...
     /// hello teacher
+    var ans = a + b;
+    return ans;
 }
 
 console.log(sum(8, 11));
