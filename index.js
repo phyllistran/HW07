@@ -30,7 +30,7 @@ console.log(sum(8, 11));
  * Write a JavaScript program that calculates the average time for this marathoner to complete the full marathon (26.2mi)
  */
 
-var matt = {
+var girl = {
     finishingTime1: 240, //in minutes
     finishingTime2: 210.4,
     finishingTime3: 235.1,
@@ -38,7 +38,7 @@ var matt = {
     finishingTime5: 197.5
 };
 
-var mark = {
+var boy = {
     finishingTime1: 120, //in minutes
     finishingTime2: 110.4,
     finishingTime3: 135.1,
@@ -49,10 +49,11 @@ var mark = {
 var getAverageTime = function(person) {
 	"use strict";
     // ... return ...
+    sum(1,2);
 }
 
-console.log(getAverageTime(matt));
-console.log(getAverageTime(mark));
+console.log(getAverageTime(girl));
+console.log(getAverageTime(boy));
 
 
 /**
