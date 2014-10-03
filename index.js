@@ -17,12 +17,11 @@
 var sum = function(a, b) {
 	"use strict";
     /// return ...
-    /// hello teacher
     var ans = a + b;
     return ans;
 }
 
-//console.log(sum(8, 11));
+console.log(sum(8, 11));
 
 /**
  * PART 2
@@ -30,7 +29,7 @@ var sum = function(a, b) {
  * Write a JavaScript program that calculates the average time for this marathoner to complete the full marathon (26.2mi)
  */
 
-var girl = {
+var matt = {
     finishingTime1: 240, //in minutes
     finishingTime2: 210.4,
     finishingTime3: 235.1,
@@ -38,7 +37,7 @@ var girl = {
     finishingTime5: 197.5
 };
 
-var boy = {
+var mark = {
     finishingTime1: 120, //in minutes
     finishingTime2: 110.4,
     finishingTime3: 135.1,
@@ -49,20 +48,19 @@ var boy = {
 var getAverageTime = function(person) {
 	"use strict";
     // ... return ...
-    // get the sum of the persons time;
-    // divide sum by five;
-    var sum = sum(person);
-    var count = 5;
-
-    console.log(sum);
-    console.log('im not crazy');
-
-    return sum;
+    var count = 0;
+    for (var time in person) {
+        if (person.hasOwnProperty(time)) {
+            count++;
+        }
+    }
+    // console.log(count);
+    var ans = (person.finishingTime1 + person.finishingTime2 + person.finishingTime3 + person.finishingTime4 + person.finishingTime5) / count;
+    return ans;  
 }
 
-console.log(getAverageTime(girl));
-console.log(getAverageTime(boy));
-
+console.log('Matt Avg: '+getAverageTime(matt));
+console.log('Mark Avg: '+getAverageTime(mark));
 
 /**
  * PART 3
@@ -97,6 +95,8 @@ function addToBank(account, savings, retirement, checking) {
 function getSumOfAccounts(account) {
 	"use strict";
     // return ...
+    var ans = account.checking + account.savings + account.retirement;
+    return ans;
 }
 
 addToBank(MattsBankAccount, 100, 10, 1);
@@ -105,4 +105,6 @@ addToBank(RobertosBankAccount, 200, 50, 19);
 var sumOfMatts = getSumOfAccounts(MattsBankAccount);
 var sumOfRobertos = getSumOfAccounts(RobertosBankAccount);
 
+console.log('Matt Sum: ' + sumOfMatts);
+console.log('Roberto Sum: ' + sumOfRobertos);
 console.log(sumOfMatts - sumOfRobertos);
