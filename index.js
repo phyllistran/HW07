@@ -22,7 +22,7 @@ var sum = function(a, b) {
     return ans;
 }
 
-console.log(sum(8, 11));
+//console.log(sum(8, 11));
 
 /**
  * PART 2
@@ -49,7 +49,15 @@ var boy = {
 var getAverageTime = function(person) {
 	"use strict";
     // ... return ...
-    sum(1,2);
+    // get the sum of the persons time;
+    // divide sum by five;
+    var sum = sum(person);
+    var count = 5;
+
+    console.log(sum);
+    console.log('im not crazy');
+
+    return sum;
 }
 
 console.log(getAverageTime(girl));
